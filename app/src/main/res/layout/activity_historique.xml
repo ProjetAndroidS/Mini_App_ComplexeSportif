@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clipToOutline="true"
+    android:padding="24dp"
+    android:clipChildren="true">
+
+    <!-- Back Button and Header -->
+    <LinearLayout
+        android:layout_width="168dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+
+        <!-- Circle background with back arrow image -->
+        <FrameLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/retour"> <!-- Define a rounded background drawable -->
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="17dp"
+                android:src="@drawable/"
+                android:contentDescription="Back"
+                android:tint="@color/black" />
+        </FrameLayout>
+
+        <!-- Title Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:text="My Historical"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <!-- Order Details Section -->
+    <LinearLayout
+        android:layout_width="327dp"
+        android:layout_height="109dp"
+        android:orientation="vertical"
+        android:background="@color/gri"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="184dp"
+        android:padding="16dp">
+
+        <!-- Divider -->
+        <View
+            android:layout_width="327dp"
+            android:layout_height="1dp"
+            android:background="#EEF2F6"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Order Title and Price Row -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tennis"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$35.25"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Vertical Divider -->
+            <View
+                android:layout_width="16dp"
+                android:layout_height="1dp"
+                android:background="#CACCDA"
+                android:layout_gravity="center_vertical"
+                android:rotation="90" />
+
+            <!-- Subscription Period -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="03 mois"
+                android:textColor="#6B6E82"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Order Divider and Highlighted Divider -->
+    <View
+        android:layout_width="375dp"
+        android:layout_height="1dp"
+        android:background="#CED7DF"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="152dp" />
+
+    <View
+        android:layout_width="146dp"
+        android:layout_height="1dp"
+        android:background="#FF7622"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="151dp"
+        android:layout_marginStart="0dp" />
+
+    <!-- Header Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Historical"
+        android:textColor="#A5A7B9"
+        android:textSize="14sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="126dp"
+        android:layout_Horizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Heading Image -->
+    <ImageView
+        android:id="@+id/heading_image"
+        android:layout_width="match_parent"
+        android:layout_height="321dp"
+        android:src="@drawable/fitnes"
+        android:background="@color/gris"
+        android:scaleType="centerCrop"
+        />
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/retour"
+        android:scaleType="centerInside"
+        android:layout_alignParentStart="true" />
+
+    <!-- Icon on Top Right -->
+    <ImageView
+        android:id="@+id/vector_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/likevide"
+        android:scaleType="centerInside"
+        android:layout_alignParentEnd="true" />
+
+    <!-- Burger Bistro Title -->
+
+    <!-- Rose Garden Text with Icon -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading_image"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="fitness "
+        android:textColor="#181c2e"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+
+    <!-- Rating Text -->
+
+    <!-- Description Text -->
+
+    <!-- Price and Cart Button Container -->
+
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="382dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Renforcement musculaire, Cardio, Pilates, Yoga, Danse, Boxe... Découvrez chaque pratique fitness et choisissez celle qui vous correspond le plus en fonction de vos objectifs forme ! ENVIE DE VOUS TONIFIER ET SCULPTER VOTRE CORPS ?"
+        android:textColor="#a0a5ba"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="184dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gri">
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="27dp"
+            android:text="$32"
+            android:textColor="#181c2e"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Add to Cart Button -->
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="59dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="82dp"
+            android:backgroundTint="#ff7622"
+            android:text="+"
+            android:textColor="@android:color/white"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nb"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="-1dp"
+            android:layout_marginBottom="114dp"
+            android:layout_toLeftOf="@+id/add"
+            android:backgroundTint="#ff7622"
+            android:text="0"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/reduce"
+            android:layout_width="59dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="-89dp"
+            android:layout_marginBottom="127dp"
+            android:layout_toLeftOf="@+id/nb"
+            android:backgroundTint="#ff7622"
+            android:text="-"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/add_to_cart_button"
+            android:layout_width="327dp"
+            android:layout_height="62dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="92dp"
+            android:layout_marginBottom="-1dp"
+            android:backgroundTint="#ff7622"
+            android:text="ADD TO CART"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="375dp"
+    android:layout_height="812dp"
+    android:background="@android:color/white"
+    android:padding="24dp">
+
+    <!-- Order Box for Starbucks -->
+    <LinearLayout
+        android:id="@+id/order_box1"
+        android:layout_width="327dp"
+        android:layout_height="171dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="574dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Starbucks"
+            android:textColor="#181C2E"
+            android:textStyle="bold"
+            android:textSize="14sp"/>
+
+        <View
+            android:layout_width="327dp"
+            android:layout_height="1dp"
+            android:background="#EEF2F6"
+            android:layout_marginTop="33dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$10.20"
+                android:textColor="#181C2E"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="14dp"
+                android:background="#CACCDA"
+                android:rotation="-90"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01 mois"
+                android:textColor="#6B6E82"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Action Buttons: Cancel and Track Order -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <!-- Cancel Button -->
+            <Button
+                android:layout_width="139dp"
+                android:layout_height="38dp"
+                android:text="Cancel"
+                android:background="@drawable/outline_button"
+                android:textColor="#FF7622"
+                android:textSize="12sp"/>
+
+            <!-- Track Order Button -->
+            <Button
+                android:layout_width="139dp"
+                android:layout_height="38dp"
+                android:text="Track Order"
+                android:backgroundTint="#FF7622"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="16dp"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Repeat for McDonald's and Pizza Hut Orders -->
+
+    <!-- Tab Layout and Divider (History) -->
+    <LinearLayout
+        android:layout_width="375dp"
+        android:layout_height="26dp"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:textColor="#A5A7B9"
+            android:textSize="14sp"
+            android:layout_marginStart="85dp"/>
+
+        <View
+            android:layout_width="375dp"
+            android:layout_height="1dp"
+            android:background="#CED7DF"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
