@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingBottom="8dp">
+            android:paddingBottom="9dp">
 
             <ImageView
                 android:layout_width="24dp"
