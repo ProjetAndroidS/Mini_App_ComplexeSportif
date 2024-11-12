@@ -13,7 +13,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="574dp"
         android:orientation="vertical"
-        android:background="@drawable/rounded_corner_bg">
+        >
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
                 android:layout_width="139dp"
                 android:layout_height="38dp"
                 android:text="Cancel"
-                android:background="@drawable/outline_button"
+
                 android:textColor="#FF7622"
                 android:textSize="12sp"/>
 

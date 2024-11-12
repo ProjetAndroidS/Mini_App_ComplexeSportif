@@ -52,8 +52,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/textView"
-        android:src="@drawable/vector" />
+       />
   </RelativeLayout>
   <RelativeLayout
       android:layout_width="327dp"
@@ -125,8 +124,8 @@
       <ImageView
           android:layout_width="23dp"
           android:layout_height="16dp"
-          android:src="@drawable/delivery"
-          android:tint="#FF7622" />
+
+          />
     </RelativeLayout>
 
     <!-- Estimated Time Icon and Text -->
@@ -147,7 +146,7 @@
       <ImageView
           android:layout_width="20dp"
           android:layout_height="20dp"
-          android:src="@drawable/clock" />
+         />
     </RelativeLayout>
   </RelativeLayout>
 
