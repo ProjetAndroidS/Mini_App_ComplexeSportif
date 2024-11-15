@@ -13,9 +13,38 @@
         android:theme="@style/Theme.Gestion_sds"
         tools:targetApi="31">
         <activity
+            android:name="com.example.gestion_sds.ActivityItemMember"
+            android:exported="false" />
+        <activity
+            android:name="com.example.gestion_sds.ActivityContact"
+            android:exported="false" />
+        <activity
+            android:name="com.example.gestion_sds.ActivityDetails"
+            android:exported="false" />
+        <activity
+            android:name="com.example.gestion_sds.ActivityHistorique"
+            android:exported="false" />
+        <activity
+            android:name="com.example.gestion_sds.ActivityMemberList"
+            android:exported="false" />
+        <activity
+            android:name="com.example.gestion_sds.ActivityProfile"
+            android:exported="false" />
+        <activity
+            android:name="com.example.gestion_sds.ActivityOrders"
+            android:exported="false" />
+        <activity
+            android:name="com.example.gestion_sds.ActivityMain"
+            android:exported="false" />
+        <activity
+            android:name="com.example.gestion_sds.ActivityLogin"
+            android:exported="false" />
+        <activity
+            android:name="com.example.gestion_sds.ActivityWelcome"
+            android:exported="false" />
+        <activity
             android:name="com.example.gestion_sds.ActivityInscri"
             android:exported="true" />
-
         <activity
             android:name=".contact"
             android:exported="true">
