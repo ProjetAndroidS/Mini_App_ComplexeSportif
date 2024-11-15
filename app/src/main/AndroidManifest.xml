@@ -13,6 +13,10 @@
         android:theme="@style/Theme.Gestion_sds"
         tools:targetApi="31">
         <activity
+            android:name="com.example.gestion_sds.ActivityInscri"
+            android:exported="true" />
+
+        <activity
             android:name=".contact"
             android:exported="true">
             <intent-filter>
