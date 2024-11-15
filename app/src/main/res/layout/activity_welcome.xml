@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello ! bienvenue !"
+        android:textColor="#1e1d1d"
+        android:textSize="16sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="100dp"
+        />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/chariot"
+        android:textColor="#1e1d1d"
+        android:textSize="16sp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/filter"
+        android:textColor="#1e1d1d"
+        android:textSize="16sp"
+        android:layout_alignParentLeft="true"
+        />
+
+
+    <!-- See All Option -->
+    <RelativeLayout
+        android:layout_width="63dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="180dp">
+
+        <!--<TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See All"
+            android:textAlignment="center"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+    -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="327dp"
+        android:layout_height="204dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="574dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basket-ball session"
+            android:textColor="#181c2e"
+            android:textSize="20sp"
+            android:layout_marginTop="124dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coach-10--20years"
+            android:textColor="#a0a5ba"
+            android:textSize="14sp"
+            android:layout_marginTop="153dp" />
+
+        <ImageView
+            android:layout_width="332dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="-4dp"
+            android:layout_marginTop="-56dp"
+            android:src="@drawable/baskett"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true" />
+
+        <!-- Rating Box -->
+        <RelativeLayout
+            android:layout_width="47dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="184dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.7"
+                android:textColor="#181c2e"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp" />
+
+            <RelativeLayout
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:backgroundTint="#FF7622"
+                android:clipToOutline="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="62dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="186dp"
+            android:layout_marginStart="71dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free"
+                android:textColor="#181c2e"
+                android:textSize="14sp"
+                android:layout_marginStart="32dp" />
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="16dp"
+
+                />
+        </RelativeLayout>
+
+        <!-- Estimated Time Icon and Text -->
+        <RelativeLayout
+            android:layout_width="74dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="184dp"
+            android:layout_marginStart="157dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 min"
+                android:textColor="#181c2e"
+                android:textSize="14sp"
+                android:layout_marginStart="29dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- Image and Text Box 2 -->
+    <RelativeLayout
+        android:layout_width="327dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="321dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tennis Session"
+            android:textColor="#181c2e"
+            android:textSize="20sp"
+            android:layout_marginTop="145dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="coach-indiv"
+            android:textColor="#a0a5ba"
+            android:textSize="14sp"
+            android:layout_marginTop="174dp" />
+
+        <ImageView
+            android:layout_width="332dp"
+            android:layout_height="215dp"
+            android:layout_marginStart="-4dp"
+            android:layout_marginTop="-70dp"
+            android:src="@drawable/tennis"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="205dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30dt/1hr"
+                android:textColor="#181c2e"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- Open Restaurants Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disponible Sports"
+        android:textColor="#32343e"
+        android:textSize="20sp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="277dp" />
+
+    <!-- Category Selection Container with three horizontal sections -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <!-- First Category Selection -->
+            <RelativeLayout
+                android:layout_width="135dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/tennis" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tennis"
+                        android:textColor="#32343e"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="67dp"
+                        android:layout_marginTop="22dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- Second Category Selection -->
+            <RelativeLayout
+                android:layout_width="135dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/baskett" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Basketball"
+                        android:textColor="#32343e"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="67dp"
+                        android:layout_marginTop="22dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- Third Category Selection -->
+            <RelativeLayout
+                android:layout_width="135dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/fitness" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fitness"
+                        android:textColor="#32343e"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="67dp"
+                        android:layout_marginTop="22dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- All Categories Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Sports Categories"
+        android:textColor="#32343e"
+        android:textSize="20sp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="50dp" />
+
+
+
+</RelativeLayout>
