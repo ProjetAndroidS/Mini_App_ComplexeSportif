@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "182611347804",
+    "firebase_url": "https://gestion-complexesportif-default-rtdb.firebaseio.com",
+    "project_id": "gestion-complexesportif",
+    "storage_bucket": "gestion-complexesportif.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182611347804:android:5cb741164672e98ae35999",
+        "android_client_info": {
+          "package_name": "com.example.gestion_sds"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaPJY2ygyIJraHmA5VmX1a1tdsOGiLHa8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182611347804:android:00b03a844d1520f1e35999",
+        "android_client_info": {
+          "package_name": "com.example.servicelocal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaPJY2ygyIJraHmA5VmX1a1tdsOGiLHa8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
