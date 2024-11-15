@@ -35,10 +35,10 @@
             android:exported="false" />
         <activity
             android:name="com.example.gestion_sds.ActivityMain"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name="com.example.gestion_sds.ActivityLogin"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name="com.example.gestion_sds.ActivityWelcome"
             android:exported="false" />
