@@ -14,7 +14,6 @@ public class ActivityInscri extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inscri);
-
         // Initialize the Login button
         Button loginButton = findViewById(R.id.Login); // Assurez-vous que l'ID est correct dans le fichier XML
 
