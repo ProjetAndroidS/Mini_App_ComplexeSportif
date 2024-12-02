@@ -19,6 +19,7 @@ public class LoginAdmin extends AppCompatActivity {
     private EditText usernameEditText;
     private EditText passwordEditText;
     private Button loginButton;
+    //
     private FirebaseAuth mAuth;
 
     @Override
