@@ -74,7 +74,7 @@ public class ActivityInscri extends AppCompatActivity {
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         FirebaseUser user = mAuth.getCurrentUser();
-                        saveUserToDatabase(user.getUid(), username, email);
+                        saveUserToDatabase(user.getUid(), username, email, password);
                         Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(ActivityInscri.this, ActivityLogin.class);
                         startActivity(intent);
@@ -89,10 +89,10 @@ public class ActivityInscri extends AppCompatActivity {
         return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
-    private void saveUserToDatabase(String userId, String username, String email) {
+    private void saveUserToDatabase(String userId, String username, String email, String password) {
         DatabaseReference database = FirebaseDatabase.getInstance("https://gestion-complexesportif-default-rtdb.firebaseio.com")
                 .getReference("Users");
-        User user = new User(username, email);
+        User user = new User(username, email, password);
         database.child(userId).setValue(user)
                 .addOnSuccessListener(aVoid -> Toast.makeText(this, "User saved successfully!", Toast.LENGTH_SHORT).show())
                 .addOnFailureListener(e -> Toast.makeText(this, "Failed to save user: " + e.getMessage(), Toast.LENGTH_SHORT).show());
@@ -101,13 +101,15 @@ public class ActivityInscri extends AppCompatActivity {
     public static class User {
         public String username;
         public String email;
+        public String password;
 
         public User() {
         }
 
-        public User(String username, String email) {
+        public User(String username, String email, String password) {
             this.username = username;
             this.email = email;
+            this.password = password;
         }
     }
 }
