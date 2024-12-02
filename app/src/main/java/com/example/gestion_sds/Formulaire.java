@@ -3,8 +3,11 @@ package com.example.gestion_sds;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.DatePicker;
 import android.widget.Toast;
@@ -19,8 +22,10 @@ public class Formulaire extends AppCompatActivity {
 
     private EditText clientNameEditText;
     private DatePicker datePicker;
+    private Spinner activitySpinner;
     private Button saveButton;
     private DatabaseReference reservationsDatabase;
+    private String selectedActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +38,27 @@ public class Formulaire extends AppCompatActivity {
         // Find Views
         clientNameEditText = findViewById(R.id.client_name);
         datePicker = findViewById(R.id.date_picker);
-        saveButton = findViewById(R.id.reserve_button); // Assuming you have a Save button in your layout
+        activitySpinner = findViewById(R.id.activity_spinner);
+        saveButton = findViewById(R.id.reserve_button);
+
+        // Set up Spinner with activities
+        String[] activities = {"Tennis", "Basketball", "Boxing", "Fitness", "Swimming", "Gymnastics"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, activities);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        activitySpinner.setAdapter(adapter);
+
+        // Listen for Spinner selection
+        activitySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selectedActivity = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                selectedActivity = null;
+            }
+        });
 
         // Set onClickListener for "Save" Button
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -65,8 +90,13 @@ public class Formulaire extends AppCompatActivity {
             return;
         }
 
+        if (selectedActivity == null || selectedActivity.isEmpty()) {
+            Toast.makeText(this, "Please select an Activity", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         // Create a Reservation object
-        Reservation reservation = new Reservation(clientName, day, month, year);
+        Reservation reservation = new Reservation(clientName, day, month, year, selectedActivity);
 
         // Save the reservation data to Firebase
         reservationsDatabase.push().setValue(reservation)
@@ -75,6 +105,7 @@ public class Formulaire extends AppCompatActivity {
                     Toast.makeText(Formulaire.this, "Reservation saved successfully", Toast.LENGTH_SHORT).show();
                     clientNameEditText.setText("");
                     datePicker.updateDate(year, month - 1, day); // Reset to current date
+                    activitySpinner.setSelection(0); // Reset spinner to default position
                 })
                 .addOnFailureListener(e -> {
                     // Show error message
@@ -86,16 +117,18 @@ public class Formulaire extends AppCompatActivity {
     public static class Reservation {
         public String clientName;
         public int day, month, year;
+        public String Activity;
 
         public Reservation() {
             // Default constructor required for Firebase
         }
 
-        public Reservation(String clientName, int day, int month, int year) {
+        public Reservation(String clientName, int day, int month, int year, String Activity) {
             this.clientName = clientName;
             this.day = day;
             this.month = month;
             this.year = year;
+            this.Activity = Activity;
         }
     }
 }
