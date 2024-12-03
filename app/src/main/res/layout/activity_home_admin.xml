@@ -16,4 +16,20 @@
         android:textSize="24sp"
         android:textColor="#000000"
         android:gravity="center" />
+    <Button
+        android:id="@+id/Client_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF5722"
+        android:text="Client list"
+        android:textColor="#FFFFFF" />
+    <Button
+        android:id="@+id/Client_Reservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF5722"
+        android:text="Client Reservation"
+        android:textColor="#FFFFFF" />
 </LinearLayout>

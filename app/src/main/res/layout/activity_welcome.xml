@@ -18,19 +18,32 @@
 
     <!-- Chariot Icon -->
     <ImageView
+        android:id="@+id/order"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/chariot"
+        android:src="@drawable/order"
         android:layout_alignParentEnd="true"
         android:layout_margin="20dp" />
 
-    <!-- Filter Icon -->
+    <!-- Filter Icon
     <ImageView
+        android:id="@+id/bt"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/filter"
         android:layout_alignParentStart="true"
-        android:layout_margin="20dp" />
+        android:layout_margin="20dp" />-->
+    <TextView
+        android:id="@+id/back_to_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOG OUT"
+        android:textColor="#FF5722"
+        android:textSize="16sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="20dp"/>
 
     <!-- See All Option
     <TextView

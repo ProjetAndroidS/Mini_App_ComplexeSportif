@@ -17,10 +17,10 @@
             android:exported="false" />
         <activity
             android:name="com.example.gestion_sds.LoginAdmin"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name="com.example.gestion_sds.Formulaire"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name="com.example.gestion_sds.ActivityItemMember"
             android:exported="false" />

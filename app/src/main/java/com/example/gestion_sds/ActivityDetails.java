@@ -1,13 +1,12 @@
 package com.example.gestion_sds;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.servicelocal.R;
 
@@ -21,9 +20,25 @@ public class ActivityDetails extends AppCompatActivity {
         // Get the session type passed from the previous activity
         String sessionType = getIntent().getStringExtra("SESSION_TYPE");
 
-        // Display the session type (for example, in a TextView)
-      //  TextView sessionText = findViewById(R.id.session_text);
-        //sessionText.setText(sessionType);
+        // Find the "Contact" button
+        Button contactButton = findViewById(R.id.Contact);
+        ImageView backButton = findViewById(R.id.back);
 
+        // Set onClickListener for the "Contact" button
+        contactButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to ActivityContact
+                Intent intent = new Intent(ActivityDetails.this, ActivityContact.class);
+                startActivity(intent);
+            }
+        });
+
+        // Set back button action
+        backButton.setOnClickListener(v -> {
+            Intent intent = new Intent(ActivityDetails.this, ActivityWelcome.class);
+            startActivity(intent);
+            finish();
+        });
     }
 }

@@ -15,12 +15,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.servicelocal.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Formulaire extends AppCompatActivity {
 
-    private EditText clientNameEditText;
+    private EditText DescriptionEditText;
     private DatePicker datePicker;
     private Spinner activitySpinner;
     private Button saveButton;
@@ -36,9 +37,9 @@ public class Formulaire extends AppCompatActivity {
         reservationsDatabase = FirebaseDatabase.getInstance().getReference("reservations");
 
         // Find Views
-        clientNameEditText = findViewById(R.id.client_name);
+        DescriptionEditText = findViewById(R.id.Description);
         datePicker = findViewById(R.id.date_picker);
-        activitySpinner = findViewById(R.id.activity_spinner);
+        activitySpinner = findViewById(R.id.spinner);
         saveButton = findViewById(R.id.reserve_button);
 
         // Set up Spinner with activities
@@ -67,26 +68,16 @@ public class Formulaire extends AppCompatActivity {
                 saveDataToDatabase();
             }
         });
-
-        // Back to Home functionality
-        TextView backToHome = findViewById(R.id.back_to_home);
-        backToHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Formulaire.this, ActivityMain.class);
-                startActivity(intent);
-            }
-        });
     }
 
     private void saveDataToDatabase() {
-        String clientName = clientNameEditText.getText().toString().trim();
+        String descriptionText = DescriptionEditText.getText().toString().trim();
         int day = datePicker.getDayOfMonth();
         int month = datePicker.getMonth() + 1; // Month is zero-based
         int year = datePicker.getYear();
 
-        if (clientName.isEmpty()) {
-            clientNameEditText.setError("Client name is required");
+        if (descriptionText.isEmpty()) {
+            DescriptionEditText.setError("Description is required");
             return;
         }
 
@@ -95,17 +86,23 @@ public class Formulaire extends AppCompatActivity {
             return;
         }
 
+        // Get the userId of the currently logged-in user
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
         // Create a Reservation object
-        Reservation reservation = new Reservation(clientName, day, month, year, selectedActivity);
+        Reservation reservation = new Reservation(descriptionText, day, month, year, selectedActivity, userId);
 
         // Save the reservation data to Firebase
         reservationsDatabase.push().setValue(reservation)
                 .addOnSuccessListener(aVoid -> {
-                    // Show success message and clear the form
+                    // Show success message
                     Toast.makeText(Formulaire.this, "Reservation saved successfully", Toast.LENGTH_SHORT).show();
-                    clientNameEditText.setText("");
-                    datePicker.updateDate(year, month - 1, day); // Reset to current date
-                    activitySpinner.setSelection(0); // Reset spinner to default position
+
+                    // Navigate to ActivityWelcome
+                    Intent welcomeIntent = new Intent(Formulaire.this, ActivityWelcome.class);
+                    startActivity(welcomeIntent);
+
+                    finish();
                 })
                 .addOnFailureListener(e -> {
                     // Show error message
@@ -113,22 +110,26 @@ public class Formulaire extends AppCompatActivity {
                 });
     }
 
+
     // Reservation class to hold the data
     public static class Reservation {
-        public String clientName;
+        public String Description;
         public int day, month, year;
         public String Activity;
+        public String userId;  // Add userId field
 
         public Reservation() {
             // Default constructor required for Firebase
         }
 
-        public Reservation(String clientName, int day, int month, int year, String Activity) {
-            this.clientName = clientName;
+        public Reservation(String Description, int day, int month, int year, String Activity, String userId) {
+            this.Description = Description;
             this.day = day;
             this.month = month;
             this.year = year;
             this.Activity = Activity;
+            this.userId = userId;
         }
     }
+
 }

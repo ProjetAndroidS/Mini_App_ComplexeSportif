@@ -9,14 +9,14 @@
         android:id="@+id/heading_image"
         android:layout_width="match_parent"
         android:layout_height="321dp"
-        android:src="@drawable/fitnes"
+        android:src="@drawable/pub"
         android:background="@color/gris"
         android:scaleType="centerCrop"
         />
 
     <!-- Back Button -->
     <ImageView
-        android:id="@+id/back_button"
+        android:id="@+id/back"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginStart="24dp"
@@ -46,7 +46,7 @@
         android:layout_below="@id/heading_image"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:text="fitness "
+        android:text="Join Our Sports Activity Platform "
         android:textColor="#181c2e"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -66,7 +66,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="382dp"
         android:lineSpacingExtra="4dp"
-        android:text="Renforcement musculaire, Cardio, Pilates, Yoga, Danse, Boxe... Découvrez chaque pratique fitness et choisissez celle qui vous correspond le plus en fonction de vos objectifs forme ! ENVIE DE VOUS TONIFIER ET SCULPTER VOTRE CORPS ?"
+        android:text="Discover a variety of sports activities with our easy-to-use platform. Whether you want to book a fitness class, find a sports club, or organize an event, we make it simple. Stay active, meet others, and reach your fitness goals—start today!"
         android:textColor="#a0a5ba"
         android:textSize="14sp" />
 
@@ -77,72 +77,19 @@
         android:background="@color/gri">
 
         <!-- Price -->
-        <TextView
-            android:id="@+id/price_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="27dp"
-            android:text="$32"
-            android:textColor="#181c2e"
-            android:textSize="20sp"
-            android:textStyle="bold" />
 
         <!-- Add to Cart Button -->
 
         <Button
-            android:id="@+id/add"
-            android:layout_width="59dp"
-            android:layout_height="50dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="1dp"
-            android:layout_marginBottom="82dp"
-            android:backgroundTint="#ff7622"
-            android:text="+"
-            android:textColor="@android:color/white"
-            android:textSize="19sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/nb"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerInParent="true"
-            android:layout_marginRight="-1dp"
-            android:layout_marginBottom="114dp"
-            android:layout_toLeftOf="@+id/add"
-            android:backgroundTint="#ff7622"
-            android:text="0"
-            android:textSize="19sp"
-            android:textStyle="bold"
-            android:layout_centerVertical="true"/>
-
-        <Button
-            android:id="@+id/reduce"
-            android:layout_width="59dp"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="-89dp"
-            android:layout_marginBottom="127dp"
-            android:layout_toLeftOf="@+id/nb"
-            android:backgroundTint="#ff7622"
-            android:text="-"
-            android:textColor="@android:color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/add_to_cart_button"
+            android:id="@+id/Contact"
             android:layout_width="327dp"
             android:layout_height="62dp"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="92dp"
-            android:layout_marginBottom="-1dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
             android:backgroundTint="#ff7622"
-            android:text="ADD TO CART"
+            android:text="Contact"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:layout_centerInParent="true"
